@@ -1,0 +1,1079 @@
+--------- beginning of crash
+03-16 09:06:18.877  8392  8392 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 09:06:18.877  8392  8392 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 09:06:18.877  8392  8392 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 09:06:18.877  8392  8392 F DEBUG   : Revision: '11'
+03-16 09:06:18.877  8392  8392 F DEBUG   : ABI: 'arm64'
+03-16 09:06:18.877  8392  8392 F DEBUG   : Processor: '7'
+03-16 09:06:18.877  8392  8392 F DEBUG   : Timestamp: 2026-03-16 09:06:18.364276012+0530
+03-16 09:06:18.877  8392  8392 F DEBUG   : Process uptime: 0s
+03-16 09:06:18.877  8392  8392 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 09:06:18.877  8392  8392 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 09:06:18.877  8392  8392 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 09:06:18.877  8392  8392 F DEBUG   : uid: 1047
+03-16 09:06:18.877  8392  8392 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 09:06:18.877  8392  8392 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 09:06:18.877  8392  8392 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 09:06:18.877  8392  8392 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 09:06:18.877  8392  8392 F DEBUG   :     x4  0000000000001080  x5  0000000000001080  x6  0000000000001080  x7  0000000092492493
+03-16 09:06:18.877  8392  8392 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b77ab2
+03-16 09:06:18.877  8392  8392 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 000000000004074a
+03-16 09:06:18.877  8392  8392 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 09:06:18.877  8392  8392 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 09:06:18.877  8392  8392 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd4ac930  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 09:06:18.877  8392  8392 F DEBUG   :     x28 0000019cf4b74858  x29 00000071fa656460
+03-16 09:06:18.877  8392  8392 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 09:06:18.877  8392  8392 F DEBUG   :     esr 0000000000000000
+03-16 09:06:18.877  8392  8392 F DEBUG   : 11 total frames
+03-16 09:06:18.877  8392  8392 F DEBUG   : backtrace:
+03-16 09:06:18.877  8392  8392 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 09:06:18.877  8392  8392 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 09:06:18.877  8392  8392 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:06:18.877  8392  8392 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:06:18.877  8392  8392 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:06:18.877  8392  8392 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:06:18.877  8392  8392 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:06:18.877  8392  8392 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:06:18.877  8392  8392 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 09:06:18.877  8392  8392 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 09:06:18.877  8392  8392 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 09:07:21.996 10492 10492 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 09:07:21.996 10492 10492 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 09:07:21.996 10492 10492 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 09:07:21.996 10492 10492 F DEBUG   : Revision: '11'
+03-16 09:07:21.996 10492 10492 F DEBUG   : ABI: 'arm64'
+03-16 09:07:21.996 10492 10492 F DEBUG   : Processor: '7'
+03-16 09:07:21.996 10492 10492 F DEBUG   : Timestamp: 2026-03-16 09:07:21.890465050+0530
+03-16 09:07:21.996 10492 10492 F DEBUG   : Process uptime: 0s
+03-16 09:07:21.996 10492 10492 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 09:07:21.996 10492 10492 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 09:07:21.996 10492 10492 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 09:07:21.996 10492 10492 F DEBUG   : uid: 1047
+03-16 09:07:21.996 10492 10492 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 09:07:21.996 10492 10492 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 09:07:21.996 10492 10492 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 09:07:21.996 10492 10492 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 09:07:21.996 10492 10492 F DEBUG   :     x4  0000000000003462  x5  0000000000003462  x6  0000000000003462  x7  0000000092492493
+03-16 09:07:21.996 10492 10492 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b77af1
+03-16 09:07:21.996 10492 10492 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 00000000000cca11
+03-16 09:07:21.996 10492 10492 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 09:07:21.996 10492 10492 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 09:07:21.996 10492 10492 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd3cc850  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 09:07:21.996 10492 10492 F DEBUG   :     x28 0000019cf4b840ae  x29 00000071fa656460
+03-16 09:07:21.996 10492 10492 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 09:07:21.996 10492 10492 F DEBUG   :     esr 0000000000000000
+03-16 09:07:21.996 10492 10492 F DEBUG   : 11 total frames
+03-16 09:07:21.996 10492 10492 F DEBUG   : backtrace:
+03-16 09:07:21.996 10492 10492 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 09:07:21.996 10492 10492 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 09:07:21.996 10492 10492 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:21.996 10492 10492 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:21.996 10492 10492 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:21.996 10492 10492 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:21.996 10492 10492 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:21.996 10492 10492 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:21.996 10492 10492 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 09:07:21.996 10492 10492 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 09:07:21.996 10492 10492 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 09:07:25.929 10754 10754 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 09:07:25.929 10754 10754 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 09:07:25.929 10754 10754 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 09:07:25.929 10754 10754 F DEBUG   : Revision: '11'
+03-16 09:07:25.929 10754 10754 F DEBUG   : ABI: 'arm64'
+03-16 09:07:25.929 10754 10754 F DEBUG   : Processor: '7'
+03-16 09:07:25.929 10754 10754 F DEBUG   : Timestamp: 2026-03-16 09:07:25.840562861+0530
+03-16 09:07:25.929 10754 10754 F DEBUG   : Process uptime: 0s
+03-16 09:07:25.929 10754 10754 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 09:07:25.929 10754 10754 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 09:07:25.929 10754 10754 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 09:07:25.929 10754 10754 F DEBUG   : uid: 1047
+03-16 09:07:25.929 10754 10754 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 09:07:25.929 10754 10754 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 09:07:25.929 10754 10754 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 09:07:25.929 10754 10754 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 09:07:25.929 10754 10754 F DEBUG   :     x4  00000000000031a7  x5  00000000000031a7  x6  00000000000031a7  x7  0000000092492493
+03-16 09:07:25.929 10754 10754 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b77af5
+03-16 09:07:25.929 10754 10754 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 00000000000c1f6e
+03-16 09:07:25.929 10754 10754 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 09:07:25.929 10754 10754 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 09:07:25.929 10754 10754 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd44c8d0  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 09:07:25.929 10754 10754 F DEBUG   :     x28 0000019cf4b85022  x29 00000071fa656460
+03-16 09:07:25.929 10754 10754 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 09:07:25.929 10754 10754 F DEBUG   :     esr 0000000000000000
+03-16 09:07:25.929 10754 10754 F DEBUG   : 11 total frames
+03-16 09:07:25.929 10754 10754 F DEBUG   : backtrace:
+03-16 09:07:25.929 10754 10754 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 09:07:25.929 10754 10754 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 09:07:25.929 10754 10754 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:25.929 10754 10754 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:25.929 10754 10754 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:25.929 10754 10754 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:25.929 10754 10754 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:25.929 10754 10754 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:25.929 10754 10754 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 09:07:25.929 10754 10754 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 09:07:25.929 10754 10754 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 09:07:36.139 11138 11138 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 09:07:36.139 11138 11138 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 09:07:36.139 11138 11138 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 09:07:36.139 11138 11138 F DEBUG   : Revision: '11'
+03-16 09:07:36.139 11138 11138 F DEBUG   : ABI: 'arm64'
+03-16 09:07:36.139 11138 11138 F DEBUG   : Processor: '6'
+03-16 09:07:36.139 11138 11138 F DEBUG   : Timestamp: 2026-03-16 09:07:36.049559420+0530
+03-16 09:07:36.139 11138 11138 F DEBUG   : Process uptime: 0s
+03-16 09:07:36.139 11138 11138 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 09:07:36.139 11138 11138 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 09:07:36.139 11138 11138 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 09:07:36.139 11138 11138 F DEBUG   : uid: 1047
+03-16 09:07:36.139 11138 11138 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 09:07:36.139 11138 11138 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 09:07:36.139 11138 11138 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 09:07:36.139 11138 11138 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 09:07:36.139 11138 11138 F DEBUG   :     x4  0000000000003e6b  x5  0000000000003e6b  x6  0000000000003e6b  x7  0000000092492493
+03-16 09:07:36.139 11138 11138 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b77aff
+03-16 09:07:36.139 11138 11138 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 00000000000f3d32
+03-16 09:07:36.139 11138 11138 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 09:07:36.139 11138 11138 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 09:07:36.139 11138 11138 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd3ac830  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 09:07:36.139 11138 11138 F DEBUG   :     x28 0000019cf4b877fe  x29 00000071fa656460
+03-16 09:07:36.139 11138 11138 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 09:07:36.139 11138 11138 F DEBUG   :     esr 0000000000000000
+03-16 09:07:36.139 11138 11138 F DEBUG   : 11 total frames
+03-16 09:07:36.139 11138 11138 F DEBUG   : backtrace:
+03-16 09:07:36.139 11138 11138 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 09:07:36.139 11138 11138 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 09:07:36.139 11138 11138 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:36.139 11138 11138 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:36.139 11138 11138 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:36.139 11138 11138 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:36.139 11138 11138 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:36.139 11138 11138 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 09:07:36.139 11138 11138 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 09:07:36.139 11138 11138 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 09:07:36.139 11138 11138 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:11:52.712  3377  3377 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:11:52.712  3377  3377 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:11:52.712  3377  3377 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:11:52.712  3377  3377 F DEBUG   : Revision: '11'
+03-16 13:11:52.712  3377  3377 F DEBUG   : ABI: 'arm64'
+03-16 13:11:52.712  3377  3377 F DEBUG   : Processor: '7'
+03-16 13:11:52.712  3377  3377 F DEBUG   : Timestamp: 2026-03-16 13:11:52.249677892+0530
+03-16 13:11:52.712  3377  3377 F DEBUG   : Process uptime: 0s
+03-16 13:11:52.712  3377  3377 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:11:52.712  3377  3377 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:11:52.712  3377  3377 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:11:52.712  3377  3377 F DEBUG   : uid: 1047
+03-16 13:11:52.712  3377  3377 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:11:52.712  3377  3377 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:11:52.712  3377  3377 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:11:52.712  3377  3377 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:11:52.712  3377  3377 F DEBUG   :     x4  0000000000000b50  x5  0000000000000b50  x6  0000000000000b50  x7  0000000092492493
+03-16 13:11:52.712  3377  3377 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7b440
+03-16 13:11:52.712  3377  3377 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 000000000002c321
+03-16 13:11:52.712  3377  3377 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:11:52.712  3377  3377 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:11:52.712  3377  3377 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd40c890  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:11:52.712  3377  3377 F DEBUG   :     x28 0000019cf5981ab5  x29 00000071fa656460
+03-16 13:11:52.712  3377  3377 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:11:52.712  3377  3377 F DEBUG   :     esr 0000000000000000
+03-16 13:11:52.712  3377  3377 F DEBUG   : 11 total frames
+03-16 13:11:52.712  3377  3377 F DEBUG   : backtrace:
+03-16 13:11:52.712  3377  3377 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:11:52.712  3377  3377 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:11:52.712  3377  3377 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:11:52.712  3377  3377 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:11:52.712  3377  3377 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:11:52.712  3377  3377 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:11:52.712  3377  3377 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:11:52.712  3377  3377 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:11:52.712  3377  3377 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:11:52.712  3377  3377 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:11:52.712  3377  3377 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:12:31.693  5070  5070 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:12:31.693  5070  5070 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:12:31.693  5070  5070 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:12:31.693  5070  5070 F DEBUG   : Revision: '11'
+03-16 13:12:31.693  5070  5070 F DEBUG   : ABI: 'arm64'
+03-16 13:12:31.693  5070  5070 F DEBUG   : Processor: '6'
+03-16 13:12:31.693  5070  5070 F DEBUG   : Timestamp: 2026-03-16 13:12:31.322957617+0530
+03-16 13:12:31.693  5070  5070 F DEBUG   : Process uptime: 0s
+03-16 13:12:31.693  5070  5070 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:12:31.693  5070  5070 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:12:31.693  5070  5070 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:12:31.693  5070  5070 F DEBUG   : uid: 1047
+03-16 13:12:31.693  5070  5070 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:12:31.693  5070  5070 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:12:31.693  5070  5070 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:12:31.693  5070  5070 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:12:31.693  5070  5070 F DEBUG   :     x4  0000000000000cb3  x5  0000000000000cb3  x6  0000000000000cb3  x7  0000000092492493
+03-16 13:12:31.693  5070  5070 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7b467
+03-16 13:12:31.693  5070  5070 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 00000000000319e8
+03-16 13:12:31.693  5070  5070 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:12:31.693  5070  5070 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:12:31.693  5070  5070 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd3cc850  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:12:31.693  5070  5070 F DEBUG   :     x28 0000019cf598b323  x29 00000071fa656460
+03-16 13:12:31.693  5070  5070 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:12:31.693  5070  5070 F DEBUG   :     esr 0000000000000000
+03-16 13:12:31.693  5070  5070 F DEBUG   : 11 total frames
+03-16 13:12:31.693  5070  5070 F DEBUG   : backtrace:
+03-16 13:12:31.693  5070  5070 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:12:31.693  5070  5070 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:12:31.693  5070  5070 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:12:31.693  5070  5070 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:12:31.693  5070  5070 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:12:31.693  5070  5070 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:12:31.693  5070  5070 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:12:31.693  5070  5070 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:12:31.693  5070  5070 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:12:31.693  5070  5070 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:12:31.693  5070  5070 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:14:00.285  7871  7871 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:14:00.285  7871  7871 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:14:00.285  7871  7871 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:14:00.285  7871  7871 F DEBUG   : Revision: '11'
+03-16 13:14:00.285  7871  7871 F DEBUG   : ABI: 'arm64'
+03-16 13:14:00.285  7871  7871 F DEBUG   : Processor: '7'
+03-16 13:14:00.285  7871  7871 F DEBUG   : Timestamp: 2026-03-16 13:14:00.076339250+0530
+03-16 13:14:00.285  7871  7871 F DEBUG   : Process uptime: 0s
+03-16 13:14:00.285  7871  7871 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:14:00.285  7871  7871 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:14:00.285  7871  7871 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:14:00.285  7871  7871 F DEBUG   : uid: 1047
+03-16 13:14:00.285  7871  7871 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:14:00.285  7871  7871 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:14:00.285  7871  7871 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:14:00.285  7871  7871 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:14:00.285  7871  7871 F DEBUG   :     x4  0000000000000088  x5  0000000000000088  x6  0000000000000088  x7  0000000092492493
+03-16 13:14:00.285  7871  7871 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7b4c0
+03-16 13:14:00.285  7871  7871 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 0000000000002166
+03-16 13:14:00.285  7871  7871 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:14:00.285  7871  7871 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:14:00.285  7871  7871 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd3bc840  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:14:00.285  7871  7871 F DEBUG   :     x28 0000019cf59a0e08  x29 00000071fa656460
+03-16 13:14:00.285  7871  7871 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:14:00.285  7871  7871 F DEBUG   :     esr 0000000000000000
+03-16 13:14:00.285  7871  7871 F DEBUG   : 11 total frames
+03-16 13:14:00.285  7871  7871 F DEBUG   : backtrace:
+03-16 13:14:00.285  7871  7871 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:14:00.285  7871  7871 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:14:00.285  7871  7871 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:00.285  7871  7871 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:00.285  7871  7871 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:00.285  7871  7871 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:00.285  7871  7871 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:00.285  7871  7871 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:00.285  7871  7871 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:14:00.285  7871  7871 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:14:00.285  7871  7871 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:14:15.268  9160  9160 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:14:15.268  9160  9160 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:14:15.268  9160  9160 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:14:15.268  9160  9160 F DEBUG   : Revision: '11'
+03-16 13:14:15.268  9160  9160 F DEBUG   : ABI: 'arm64'
+03-16 13:14:15.268  9160  9160 F DEBUG   : Processor: '7'
+03-16 13:14:15.268  9160  9160 F DEBUG   : Timestamp: 2026-03-16 13:14:15.138571223+0530
+03-16 13:14:15.268  9160  9160 F DEBUG   : Process uptime: 0s
+03-16 13:14:15.268  9160  9160 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:14:15.268  9160  9160 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:14:15.268  9160  9160 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:14:15.268  9160  9160 F DEBUG   : uid: 1047
+03-16 13:14:15.268  9160  9160 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:14:15.268  9160  9160 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:14:15.268  9160  9160 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:14:15.268  9160  9160 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:14:15.268  9160  9160 F DEBUG   :     x4  0000000000000535  x5  0000000000000535  x6  0000000000000535  x7  0000000092492493
+03-16 13:14:15.268  9160  9160 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7b4cf
+03-16 13:14:15.268  9160  9160 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 000000000001459d
+03-16 13:14:15.268  9160  9160 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:14:15.268  9160  9160 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:14:15.268  9160  9160 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd3cc850  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:14:15.268  9160  9160 F DEBUG   :     x28 0000019cf59a48eb  x29 00000071fa656460
+03-16 13:14:15.268  9160  9160 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:14:15.268  9160  9160 F DEBUG   :     esr 0000000000000000
+03-16 13:14:15.268  9160  9160 F DEBUG   : 11 total frames
+03-16 13:14:15.268  9160  9160 F DEBUG   : backtrace:
+03-16 13:14:15.268  9160  9160 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:14:15.268  9160  9160 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:14:15.268  9160  9160 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:15.268  9160  9160 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:15.268  9160  9160 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:15.268  9160  9160 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:15.268  9160  9160 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:15.268  9160  9160 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:14:15.268  9160  9160 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:14:15.268  9160  9160 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:14:15.268  9160  9160 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:18:07.292 12243 12243 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:18:07.292 12243 12243 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:18:07.292 12243 12243 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:18:07.292 12243 12243 F DEBUG   : Revision: '11'
+03-16 13:18:07.292 12243 12243 F DEBUG   : ABI: 'arm64'
+03-16 13:18:07.292 12243 12243 F DEBUG   : Processor: '6'
+03-16 13:18:07.292 12243 12243 F DEBUG   : Timestamp: 2026-03-16 13:18:06.684817489+0530
+03-16 13:18:07.292 12243 12243 F DEBUG   : Process uptime: 0s
+03-16 13:18:07.292 12243 12243 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:18:07.292 12243 12243 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:18:07.292 12243 12243 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:18:07.292 12243 12243 F DEBUG   : uid: 1047
+03-16 13:18:07.292 12243 12243 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:18:07.292 12243 12243 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:18:07.292 12243 12243 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:18:07.292 12243 12243 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:18:07.292 12243 12243 F DEBUG   :     x4  00000000000025de  x5  00000000000025de  x6  00000000000025de  x7  0000000092492493
+03-16 13:18:07.292 12243 12243 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7b5b6
+03-16 13:18:07.292 12243 12243 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 0000000000093eba
+03-16 13:18:07.292 12243 12243 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:18:07.292 12243 12243 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:18:07.292 12243 12243 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd3bc840  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:18:07.292 12243 12243 F DEBUG   :     x28 0000019cf59dd14d  x29 00000071fa656460
+03-16 13:18:07.292 12243 12243 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:18:07.292 12243 12243 F DEBUG   :     esr 0000000000000000
+03-16 13:18:07.292 12243 12243 F DEBUG   : 11 total frames
+03-16 13:18:07.292 12243 12243 F DEBUG   : backtrace:
+03-16 13:18:07.292 12243 12243 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:18:07.292 12243 12243 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:18:07.292 12243 12243 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:18:07.292 12243 12243 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:18:07.292 12243 12243 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:18:07.292 12243 12243 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:18:07.292 12243 12243 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:18:07.292 12243 12243 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:18:07.292 12243 12243 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:18:07.292 12243 12243 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:18:07.292 12243 12243 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:19:34.274 13234 13234 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:19:34.274 13234 13234 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:19:34.274 13234 13234 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:19:34.274 13234 13234 F DEBUG   : Revision: '11'
+03-16 13:19:34.274 13234 13234 F DEBUG   : ABI: 'arm64'
+03-16 13:19:34.274 13234 13234 F DEBUG   : Processor: '6'
+03-16 13:19:34.274 13234 13234 F DEBUG   : Timestamp: 2026-03-16 13:19:34.169381253+0530
+03-16 13:19:34.274 13234 13234 F DEBUG   : Process uptime: 0s
+03-16 13:19:34.274 13234 13234 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:19:34.274 13234 13234 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:19:34.274 13234 13234 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:19:34.274 13234 13234 F DEBUG   : uid: 1047
+03-16 13:19:34.274 13234 13234 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:19:34.274 13234 13234 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:19:34.275 13234 13234 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:19:34.275 13234 13234 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:19:34.275 13234 13234 F DEBUG   :     x4  00000000000004b7  x5  00000000000004b7  x6  00000000000004b7  x7  0000000092492493
+03-16 13:19:34.275 13234 13234 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7b60e
+03-16 13:19:34.275 13234 13234 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 00000000000126dc
+03-16 13:19:34.275 13234 13234 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:19:34.275 13234 13234 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:19:34.275 13234 13234 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd3ec870  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:19:34.275 13234 13234 F DEBUG   :     x28 0000019cf59f26fb  x29 00000071fa656460
+03-16 13:19:34.275 13234 13234 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:19:34.275 13234 13234 F DEBUG   :     esr 0000000000000000
+03-16 13:19:34.275 13234 13234 F DEBUG   : 11 total frames
+03-16 13:19:34.275 13234 13234 F DEBUG   : backtrace:
+03-16 13:19:34.275 13234 13234 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:19:34.275 13234 13234 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:19:34.275 13234 13234 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:34.275 13234 13234 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:34.275 13234 13234 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:34.275 13234 13234 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:34.275 13234 13234 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:34.275 13234 13234 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:34.275 13234 13234 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:19:34.275 13234 13234 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:19:34.275 13234 13234 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:19:42.096 13514 13514 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:19:42.096 13514 13514 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:19:42.096 13514 13514 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:19:42.096 13514 13514 F DEBUG   : Revision: '11'
+03-16 13:19:42.096 13514 13514 F DEBUG   : ABI: 'arm64'
+03-16 13:19:42.096 13514 13514 F DEBUG   : Processor: '6'
+03-16 13:19:42.096 13514 13514 F DEBUG   : Timestamp: 2026-03-16 13:19:42.001563125+0530
+03-16 13:19:42.096 13514 13514 F DEBUG   : Process uptime: 0s
+03-16 13:19:42.096 13514 13514 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:19:42.096 13514 13514 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:19:42.096 13514 13514 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:19:42.096 13514 13514 F DEBUG   : uid: 1047
+03-16 13:19:42.096 13514 13514 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:19:42.096 13514 13514 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:19:42.096 13514 13514 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:19:42.096 13514 13514 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:19:42.096 13514 13514 F DEBUG   :     x4  0000000000003b36  x5  0000000000003b36  x6  0000000000003b36  x7  0000000092492493
+03-16 13:19:42.096 13514 13514 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7b615
+03-16 13:19:42.096 13514 13514 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 00000000000e74e6
+03-16 13:19:42.096 13514 13514 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:19:42.096 13514 13514 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:19:42.096 13514 13514 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd3fc880  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:19:42.096 13514 13514 F DEBUG   :     x28 0000019cf59f45bb  x29 00000071fa656460
+03-16 13:19:42.096 13514 13514 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:19:42.096 13514 13514 F DEBUG   :     esr 0000000000000000
+03-16 13:19:42.096 13514 13514 F DEBUG   : 11 total frames
+03-16 13:19:42.096 13514 13514 F DEBUG   : backtrace:
+03-16 13:19:42.096 13514 13514 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:19:42.096 13514 13514 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:19:42.096 13514 13514 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:42.096 13514 13514 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:42.096 13514 13514 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:42.096 13514 13514 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:42.096 13514 13514 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:42.096 13514 13514 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:42.096 13514 13514 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:19:42.096 13514 13514 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:19:42.096 13514 13514 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:19:57.861 13950 13950 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:19:57.861 13950 13950 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:19:57.861 13950 13950 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:19:57.861 13950 13950 F DEBUG   : Revision: '11'
+03-16 13:19:57.861 13950 13950 F DEBUG   : ABI: 'arm64'
+03-16 13:19:57.861 13950 13950 F DEBUG   : Processor: '7'
+03-16 13:19:57.861 13950 13950 F DEBUG   : Timestamp: 2026-03-16 13:19:57.763870879+0530
+03-16 13:19:57.861 13950 13950 F DEBUG   : Process uptime: 0s
+03-16 13:19:57.861 13950 13950 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:19:57.861 13950 13950 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:19:57.861 13950 13950 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:19:57.861 13950 13950 F DEBUG   : uid: 1047
+03-16 13:19:57.861 13950 13950 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:19:57.861 13950 13950 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:19:57.861 13950 13950 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:19:57.861 13950 13950 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:19:57.861 13950 13950 F DEBUG   :     x4  0000000000002c4e  x5  0000000000002c4e  x6  0000000000002c4e  x7  0000000092492493
+03-16 13:19:57.861 13950 13950 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7b625
+03-16 13:19:57.861 13950 13950 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 00000000000ad134
+03-16 13:19:57.861 13950 13950 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:19:57.861 13950 13950 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:19:57.861 13950 13950 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd41c8a0  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:19:57.861 13950 13950 F DEBUG   :     x28 0000019cf59f834c  x29 00000071fa656460
+03-16 13:19:57.861 13950 13950 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:19:57.861 13950 13950 F DEBUG   :     esr 0000000000000000
+03-16 13:19:57.861 13950 13950 F DEBUG   : 11 total frames
+03-16 13:19:57.861 13950 13950 F DEBUG   : backtrace:
+03-16 13:19:57.862 13950 13950 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:19:57.862 13950 13950 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:19:57.862 13950 13950 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:57.862 13950 13950 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:57.862 13950 13950 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:57.862 13950 13950 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:57.862 13950 13950 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:57.862 13950 13950 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:19:57.862 13950 13950 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:19:57.862 13950 13950 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:19:57.862 13950 13950 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:20:00.521 14187 14187 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:20:00.521 14187 14187 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:20:00.521 14187 14187 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:20:00.521 14187 14187 F DEBUG   : Revision: '11'
+03-16 13:20:00.521 14187 14187 F DEBUG   : ABI: 'arm64'
+03-16 13:20:00.521 14187 14187 F DEBUG   : Processor: '6'
+03-16 13:20:00.521 14187 14187 F DEBUG   : Timestamp: 2026-03-16 13:20:00.413283639+0530
+03-16 13:20:00.521 14187 14187 F DEBUG   : Process uptime: 0s
+03-16 13:20:00.521 14187 14187 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:20:00.521 14187 14187 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:20:00.521 14187 14187 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:20:00.521 14187 14187 F DEBUG   : uid: 1047
+03-16 13:20:00.521 14187 14187 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:20:00.521 14187 14187 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:20:00.521 14187 14187 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:20:00.521 14187 14187 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:20:00.521 14187 14187 F DEBUG   :     x4  0000000000001685  x5  0000000000001685  x6  0000000000001685  x7  0000000092492493
+03-16 13:20:00.521 14187 14187 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7b628
+03-16 13:20:00.521 14187 14187 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 0000000000057f8c
+03-16 13:20:00.521 14187 14187 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:20:00.521 14187 14187 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:20:00.521 14187 14187 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd42c8b0  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:20:00.521 14187 14187 F DEBUG   :     x28 0000019cf59f8da8  x29 00000071fa656460
+03-16 13:20:00.521 14187 14187 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:20:00.521 14187 14187 F DEBUG   :     esr 0000000000000000
+03-16 13:20:00.521 14187 14187 F DEBUG   : 11 total frames
+03-16 13:20:00.521 14187 14187 F DEBUG   : backtrace:
+03-16 13:20:00.521 14187 14187 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:20:00.521 14187 14187 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:20:00.521 14187 14187 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:00.521 14187 14187 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:00.521 14187 14187 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:00.521 14187 14187 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:00.521 14187 14187 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:00.521 14187 14187 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:00.521 14187 14187 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:20:00.521 14187 14187 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:20:00.521 14187 14187 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:20:06.274 14545 14545 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:20:06.274 14545 14545 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:20:06.274 14545 14545 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:20:06.274 14545 14545 F DEBUG   : Revision: '11'
+03-16 13:20:06.274 14545 14545 F DEBUG   : ABI: 'arm64'
+03-16 13:20:06.274 14545 14545 F DEBUG   : Processor: '7'
+03-16 13:20:06.274 14545 14545 F DEBUG   : Timestamp: 2026-03-16 13:20:06.184560199+0530
+03-16 13:20:06.274 14545 14545 F DEBUG   : Process uptime: 0s
+03-16 13:20:06.274 14545 14545 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:20:06.274 14545 14545 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:20:06.274 14545 14545 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:20:06.274 14545 14545 F DEBUG   : uid: 1047
+03-16 13:20:06.274 14545 14545 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:20:06.274 14545 14545 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:20:06.274 14545 14545 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:20:06.274 14545 14545 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:20:06.274 14545 14545 F DEBUG   :     x4  000000000000088d  x5  000000000000088d  x6  000000000000088d  x7  0000000092492493
+03-16 13:20:06.274 14545 14545 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7b62e
+03-16 13:20:06.274 14545 14545 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 0000000000021677
+03-16 13:20:06.274 14545 14545 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:20:06.274 14545 14545 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:20:06.274 14545 14545 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd52c9b0  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:20:06.274 14545 14545 F DEBUG   :     x28 0000019cf59fa438  x29 00000071fa656460
+03-16 13:20:06.274 14545 14545 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:20:06.274 14545 14545 F DEBUG   :     esr 0000000000000000
+03-16 13:20:06.274 14545 14545 F DEBUG   : 11 total frames
+03-16 13:20:06.274 14545 14545 F DEBUG   : backtrace:
+03-16 13:20:06.274 14545 14545 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:20:06.274 14545 14545 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:20:06.274 14545 14545 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:06.274 14545 14545 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:06.274 14545 14545 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:06.274 14545 14545 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:06.274 14545 14545 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:06.274 14545 14545 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:20:06.274 14545 14545 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:20:06.274 14545 14545 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:20:06.274 14545 14545 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:44:37.136 27226 27226 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:44:37.136 27226 27226 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:44:37.136 27226 27226 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:44:37.136 27226 27226 F DEBUG   : Revision: '11'
+03-16 13:44:37.136 27226 27226 F DEBUG   : ABI: 'arm64'
+03-16 13:44:37.136 27226 27226 F DEBUG   : Processor: '7'
+03-16 13:44:37.136 27226 27226 F DEBUG   : Timestamp: 2026-03-16 13:44:36.590415095+0530
+03-16 13:44:37.136 27226 27226 F DEBUG   : Process uptime: 0s
+03-16 13:44:37.136 27226 27226 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:44:37.136 27226 27226 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:44:37.136 27226 27226 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:44:37.136 27226 27226 F DEBUG   : uid: 1047
+03-16 13:44:37.136 27226 27226 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:44:37.136 27226 27226 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:44:37.136 27226 27226 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:44:37.136 27226 27226 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:44:37.136 27226 27226 F DEBUG   :     x4  0000000000001623  x5  0000000000001623  x6  0000000000001623  x7  0000000092492493
+03-16 13:44:37.136 27226 27226 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7bbec
+03-16 13:44:37.136 27226 27226 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 0000000000056798
+03-16 13:44:37.136 27226 27226 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:44:37.136 27226 27226 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:44:37.136 27226 27226 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd42c8b0  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:44:37.136 27226 27226 F DEBUG   :     x28 0000019cf5b61342  x29 00000071fa656460
+03-16 13:44:37.136 27226 27226 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:44:37.136 27226 27226 F DEBUG   :     esr 0000000000000000
+03-16 13:44:37.136 27226 27226 F DEBUG   : 11 total frames
+03-16 13:44:37.136 27226 27226 F DEBUG   : backtrace:
+03-16 13:44:37.136 27226 27226 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:44:37.136 27226 27226 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:44:37.136 27226 27226 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:44:37.136 27226 27226 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:44:37.136 27226 27226 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:44:37.136 27226 27226 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:44:37.136 27226 27226 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:44:37.136 27226 27226 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:44:37.136 27226 27226 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:44:37.136 27226 27226 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:44:37.136 27226 27226 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:45:29.717 28168 28168 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 13:45:29.717 28168 28168 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 13:45:29.717 28168 28168 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 13:45:29.717 28168 28168 F DEBUG   : Revision: '11'
+03-16 13:45:29.717 28168 28168 F DEBUG   : ABI: 'arm64'
+03-16 13:45:29.717 28168 28168 F DEBUG   : Processor: '6'
+03-16 13:45:29.717 28168 28168 F DEBUG   : Timestamp: 2026-03-16 13:45:29.594668721+0530
+03-16 13:45:29.717 28168 28168 F DEBUG   : Process uptime: 0s
+03-16 13:45:29.717 28168 28168 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:45:29.717 28168 28168 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 13:45:29.717 28168 28168 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 13:45:29.717 28168 28168 F DEBUG   : uid: 1047
+03-16 13:45:29.717 28168 28168 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 13:45:29.717 28168 28168 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 13:45:29.717 28168 28168 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 13:45:29.717 28168 28168 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 13:45:29.717 28168 28168 F DEBUG   :     x4  000000000000221f  x5  000000000000221f  x6  000000000000221f  x7  0000000092492493
+03-16 13:45:29.717 28168 28168 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7bc21
+03-16 13:45:29.717 28168 28168 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 00000000000854c8
+03-16 13:45:29.717 28168 28168 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 13:45:29.717 28168 28168 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 13:45:29.717 28168 28168 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd41c8a0  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 13:45:29.717 28168 28168 F DEBUG   :     x28 0000019cf5b6e309  x29 00000071fa656460
+03-16 13:45:29.717 28168 28168 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 13:45:29.717 28168 28168 F DEBUG   :     esr 0000000000000000
+03-16 13:45:29.717 28168 28168 F DEBUG   : 11 total frames
+03-16 13:45:29.717 28168 28168 F DEBUG   : backtrace:
+03-16 13:45:29.717 28168 28168 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:45:29.717 28168 28168 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 13:45:29.717 28168 28168 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:45:29.717 28168 28168 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:45:29.717 28168 28168 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:45:29.717 28168 28168 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:45:29.717 28168 28168 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:45:29.717 28168 28168 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 13:45:29.717 28168 28168 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 13:45:29.717 28168 28168 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 13:45:29.717 28168 28168 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 15:05:29.084 16995 16995 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-16 15:05:29.084 16995 16995 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-16 15:05:29.084 16995 16995 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-16 15:05:29.084 16995 16995 F DEBUG   : Revision: '11'
+03-16 15:05:29.084 16995 16995 F DEBUG   : ABI: 'arm64'
+03-16 15:05:29.084 16995 16995 F DEBUG   : Processor: '6'
+03-16 15:05:29.084 16995 16995 F DEBUG   : Timestamp: 2026-03-16 15:05:28.715368973+0530
+03-16 15:05:29.084 16995 16995 F DEBUG   : Process uptime: 0s
+03-16 15:05:29.084 16995 16995 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 15:05:29.084 16995 16995 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-16 15:05:29.084 16995 16995 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-16 15:05:29.084 16995 16995 F DEBUG   : uid: 1047
+03-16 15:05:29.084 16995 16995 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-16 15:05:29.084 16995 16995 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-16 15:05:29.084 16995 16995 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-16 15:05:29.084 16995 16995 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-16 15:05:29.084 16995 16995 F DEBUG   :     x4  00000000000027a3  x5  00000000000027a3  x6  00000000000027a3  x7  0000000092492493
+03-16 15:05:29.084 16995 16995 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069b7cee0
+03-16 15:05:29.084 16995 16995 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 000000000009ad57
+03-16 15:05:29.084 16995 16995 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-16 15:05:29.084 16995 16995 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-16 15:05:29.084 16995 16995 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd43c8c0  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-16 15:05:29.084 16995 16995 F DEBUG   :     x28 0000019cf6001d7a  x29 00000071fa656460
+03-16 15:05:29.084 16995 16995 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-16 15:05:29.084 16995 16995 F DEBUG   :     esr 0000000000000000
+03-16 15:05:29.084 16995 16995 F DEBUG   : 11 total frames
+03-16 15:05:29.084 16995 16995 F DEBUG   : backtrace:
+03-16 15:05:29.084 16995 16995 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 15:05:29.084 16995 16995 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-16 15:05:29.084 16995 16995 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 15:05:29.084 16995 16995 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 15:05:29.084 16995 16995 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 15:05:29.084 16995 16995 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 15:05:29.084 16995 16995 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 15:05:29.084 16995 16995 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-16 15:05:29.084 16995 16995 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-16 15:05:29.084 16995 16995 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-16 15:05:29.084 16995 16995 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-18 18:17:55.834 15636 15636 F libc    : Fatal signal 31 (SIGSYS), code 1 (SYS_SECCOMP), syscall 116 in tid 15636 (dmesg), pid 15636 (dmesg)
+03-18 18:17:55.957 15708 15708 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-18 18:17:55.957 15708 15708 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-18 18:17:55.957 15708 15708 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-18 18:17:55.957 15708 15708 F DEBUG   : Revision: '11'
+03-18 18:17:55.957 15708 15708 F DEBUG   : ABI: 'arm64'
+03-18 18:17:55.957 15708 15708 F DEBUG   : Processor: '4'
+03-18 18:17:55.957 15708 15708 F DEBUG   : Timestamp: 2026-03-18 18:17:55.922769479+0530
+03-18 18:17:55.957 15708 15708 F DEBUG   : Process uptime: 1s
+03-18 18:17:55.957 15708 15708 F DEBUG   : Executable: /system/bin/toybox
+03-18 18:17:55.957 15708 15708 F DEBUG   : Cmdline: dmesg
+03-18 18:17:55.957 15708 15708 F DEBUG   : pid: 15636, tid: 15636, name: dmesg  >>> dmesg <<<
+03-18 18:17:55.957 15708 15708 F DEBUG   : uid: 10374
+03-18 18:17:55.957 15708 15708 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-18 18:17:55.957 15708 15708 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-18 18:17:55.957 15708 15708 F DEBUG   : esr: 0000000092000007 (Data Abort Exception 0x24)
+03-18 18:17:55.957 15708 15708 F DEBUG   : signal 31 (SIGSYS), code 1 (SYS_SECCOMP), fault addr --------
+03-18 18:17:55.957 15708 15708 F DEBUG   : Cause: seccomp prevented call to disallowed arm64 system call 116
+03-18 18:17:55.957 15708 15708 F DEBUG   :     x0  000000000000000a  x1  0000000000000000  x2  0000000000000000  x3  0000000000000000
+03-18 18:17:55.957 15708 15708 F DEBUG   :     x4  0000007fd757b8d1  x5  0000000000000040  x6  000000000000003f  x7  0000000000000000
+03-18 18:17:55.957 15708 15708 F DEBUG   :     x8  0000000000000074  x9  0000000000000000  x10 0000007fd757b8d1  x11 0200007a7fe3a010
+03-18 18:17:55.957 15708 15708 F DEBUG   :     x12 0000010100000303  x13 0000000000000202  x14 0000000000000000  x15 0000000000000101
+03-18 18:17:55.957 15708 15708 F DEBUG   :     x16 00000060cdca81e0  x17 0000007ad2daa440  x18 0000007adbc40000  x19 0000000000000000
+03-18 18:17:55.957 15708 15708 F DEBUG   :     x20 0000000000000000  x21 00000060cdcae000  x22 0000007adac2e000  x23 00000060cdcae000
+03-18 18:17:55.957 15708 15708 F DEBUG   :     x24 00000060cdcae000  x25 00000060cdcac018  x26 0000007fd757ba30  x27 00000060cdcae000
+03-18 18:17:55.957 15708 15708 F DEBUG   :     x28 0000000000000000  x29 0000007fd757b8e0
+03-18 18:17:55.957 15708 15708 F DEBUG   :     lr  00000060cdc82310  sp  0000007fd75798d0  pc  0000007ad2daa44c  pst 0000000060001000
+03-18 18:17:55.957 15708 15708 F DEBUG   :     esr 0000000092000007
+03-18 18:17:55.957 15708 15708 F DEBUG   : 5 total frames
+03-18 18:17:55.957 15708 15708 F DEBUG   : backtrace:
+03-18 18:17:55.957 15708 15708 F DEBUG   :       #00 pc 00000000000d744c  /apex/com.android.runtime/lib64/bionic/libc.so (klogctl+12) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-18 18:17:55.957 15708 15708 F DEBUG   :       #01 pc 000000000005e30c  /system/bin/toybox (dmesg_main+432) (BuildId: 4e21f72c0089163188a44bb9c36e9222)
+03-18 18:17:55.957 15708 15708 F DEBUG   :       #02 pc 00000000000390c0  /system/bin/toybox (toybox_main+608) (BuildId: 4e21f72c0089163188a44bb9c36e9222)
+03-18 18:17:55.957 15708 15708 F DEBUG   :       #03 pc 00000000000397dc  /system/bin/toybox (main+60) (BuildId: 4e21f72c0089163188a44bb9c36e9222)
+03-18 18:17:55.957 15708 15708 F DEBUG   :       #04 pc 0000000000069a24  /apex/com.android.runtime/lib64/bionic/libc.so (__libc_init+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-18 18:18:56.478 18693 18693 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-18 18:18:56.478 18693 18693 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-18 18:18:56.478 18693 18693 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-18 18:18:56.478 18693 18693 F DEBUG   : Revision: '11'
+03-18 18:18:56.478 18693 18693 F DEBUG   : ABI: 'arm64'
+03-18 18:18:56.478 18693 18693 F DEBUG   : Processor: '6'
+03-18 18:18:56.478 18693 18693 F DEBUG   : Timestamp: 2026-03-18 18:18:56.176142373+0530
+03-18 18:18:56.478 18693 18693 F DEBUG   : Process uptime: 0s
+03-18 18:18:56.478 18693 18693 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-18 18:18:56.478 18693 18693 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-18 18:18:56.478 18693 18693 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-18 18:18:56.478 18693 18693 F DEBUG   : uid: 1047
+03-18 18:18:56.478 18693 18693 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-18 18:18:56.478 18693 18693 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-18 18:18:56.478 18693 18693 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-18 18:18:56.478 18693 18693 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-18 18:18:56.478 18693 18693 F DEBUG   :     x4  0000000000000787  x5  0000000000000787  x6  0000000000000787  x7  0000000092492493
+03-18 18:18:56.478 18693 18693 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069ba9f38
+03-18 18:18:56.478 18693 18693 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 000000000001d68c
+03-18 18:18:56.478 18693 18693 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-18 18:18:56.478 18693 18693 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-18 18:18:56.478 18693 18693 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd4cc950  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-18 18:18:56.478 18693 18693 F DEBUG   :     x28 0000019d00fdf338  x29 00000071fa656460
+03-18 18:18:56.478 18693 18693 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-18 18:18:56.478 18693 18693 F DEBUG   :     esr 0000000000000000
+03-18 18:18:56.478 18693 18693 F DEBUG   : 11 total frames
+03-18 18:18:56.478 18693 18693 F DEBUG   : backtrace:
+03-18 18:18:56.478 18693 18693 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-18 18:18:56.478 18693 18693 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-18 18:18:56.478 18693 18693 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:18:56.478 18693 18693 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:18:56.478 18693 18693 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:18:56.478 18693 18693 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:18:56.478 18693 18693 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:18:56.478 18693 18693 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:18:56.478 18693 18693 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-18 18:18:56.478 18693 18693 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-18 18:18:56.478 18693 18693 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-18 18:20:41.345 19287 19287 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-18 18:20:41.345 19287 19287 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-18 18:20:41.345 19287 19287 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-18 18:20:41.345 19287 19287 F DEBUG   : Revision: '11'
+03-18 18:20:41.345 19287 19287 F DEBUG   : ABI: 'arm64'
+03-18 18:20:41.345 19287 19287 F DEBUG   : Processor: '6'
+03-18 18:20:41.345 19287 19287 F DEBUG   : Timestamp: 2026-03-18 18:20:41.198948207+0530
+03-18 18:20:41.345 19287 19287 F DEBUG   : Process uptime: 0s
+03-18 18:20:41.345 19287 19287 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-18 18:20:41.345 19287 19287 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-18 18:20:41.345 19287 19287 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-18 18:20:41.345 19287 19287 F DEBUG   : uid: 1047
+03-18 18:20:41.345 19287 19287 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-18 18:20:41.345 19287 19287 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-18 18:20:41.345 19287 19287 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-18 18:20:41.345 19287 19287 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-18 18:20:41.345 19287 19287 F DEBUG   :     x4  00000000000007ca  x5  00000000000007ca  x6  00000000000007ca  x7  0000000092492493
+03-18 18:20:41.345 19287 19287 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069ba9fa1
+03-18 18:20:41.345 19287 19287 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 000000000001e700
+03-18 18:20:41.345 19287 19287 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-18 18:20:41.345 19287 19287 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-18 18:20:41.345 19287 19287 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd3fc880  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-18 18:20:41.345 19287 19287 F DEBUG   :     x28 0000019d00ff8d64  x29 00000071fa656460
+03-18 18:20:41.345 19287 19287 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-18 18:20:41.345 19287 19287 F DEBUG   :     esr 0000000000000000
+03-18 18:20:41.345 19287 19287 F DEBUG   : 11 total frames
+03-18 18:20:41.345 19287 19287 F DEBUG   : backtrace:
+03-18 18:20:41.345 19287 19287 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-18 18:20:41.345 19287 19287 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-18 18:20:41.345 19287 19287 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:20:41.345 19287 19287 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:20:41.345 19287 19287 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:20:41.345 19287 19287 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:20:41.345 19287 19287 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:20:41.345 19287 19287 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:20:41.345 19287 19287 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-18 18:20:41.345 19287 19287 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-18 18:20:41.345 19287 19287 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-18 18:26:21.574 20886 20886 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-18 18:26:21.574 20886 20886 F DEBUG   : Build fingerprint: 'samsung/pa1qxins/pa1q:16/BP4A.251205.006/S931BXXU8ZZC7_OXM8ZZC7:user/release-keys'
+03-18 18:26:21.574 20886 20886 F DEBUG   : Kernel Release: '6.6.98-android15-8-pd6202ec-abogkiS931BXXU8ZZC7-4k'
+03-18 18:26:21.574 20886 20886 F DEBUG   : Revision: '11'
+03-18 18:26:21.574 20886 20886 F DEBUG   : ABI: 'arm64'
+03-18 18:26:21.574 20886 20886 F DEBUG   : Processor: '6'
+03-18 18:26:21.574 20886 20886 F DEBUG   : Timestamp: 2026-03-18 18:26:21.391248056+0530
+03-18 18:26:21.574 20886 20886 F DEBUG   : Process uptime: 0s
+03-18 18:26:21.574 20886 20886 F DEBUG   : Executable: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-18 18:26:21.574 20886 20886 F DEBUG   : Cmdline: /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+03-18 18:26:21.574 20886 20886 F DEBUG   : pid: 2304, tid: 2304, name: binder:2304_2  >>> /vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64 <<<
+03-18 18:26:21.574 20886 20886 F DEBUG   : uid: 1047
+03-18 18:26:21.574 20886 20886 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+03-18 18:26:21.574 20886 20886 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+03-18 18:26:21.574 20886 20886 F DEBUG   : signal 35 (<debuggerd signal>), code -1 (SI_QUEUE), fault addr --------
+03-18 18:26:21.574 20886 20886 F DEBUG   :     x0  0000000000000000  x1  0000000000000b0a  x2  0000000000000023  x3  00000071fa6563e0
+03-18 18:26:21.574 20886 20886 F DEBUG   :     x4  0000000000001236  x5  0000000000001236  x6  0000000000001236  x7  0000000092492493
+03-18 18:26:21.574 20886 20886 F DEBUG   :     x8  00000000000000f0  x9  0000000000004d58  x10 e7e86fddcf2e77cd  x11 0000000069baa0f5
+03-18 18:26:21.574 20886 20886 F DEBUG   :     x12 00000074af70c570  x13 0000000000000000  x14 00000000000003e8  x15 0000000000047262
+03-18 18:26:21.574 20886 20886 F DEBUG   :     x16 00000074af70b138  x17 00000074af6f0700  x18 00000071f97fc000  x19 0000000000000023
+03-18 18:26:21.574 20886 20886 F DEBUG   :     x20 0000000000000900  x21 0000000000000b0a  x22 00000071fa659f00  x23 0000000000000000
+03-18 18:26:21.574 20886 20886 F DEBUG   :     x24 00000071fa659f00  x25 b4000072bd29c720  x26 20c49ba5e353f7cf  x27 000000720c2fd008
+03-18 18:26:21.574 20886 20886 F DEBUG   :     x28 0000019d0104be2b  x29 00000071fa656460
+03-18 18:26:21.574 20886 20886 F DEBUG   :     lr  00000074af6a6678  sp  00000071fa6563e0  pc  00000074af6a669c  pst 0000000000001000
+03-18 18:26:21.574 20886 20886 F DEBUG   :     esr 0000000000000000
+03-18 18:26:21.574 20886 20886 F DEBUG   : 11 total frames
+03-18 18:26:21.574 20886 20886 F DEBUG   : backtrace:
+03-18 18:26:21.574 20886 20886 F DEBUG   :       #00 pc 000000000008a69c  /apex/com.android.runtime/lib64/bionic/libc.so (raise+124) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-18 18:26:21.574 20886 20886 F DEBUG   :       #01 pc 0000000000037c5c  /vendor/lib64/libcamxcommonutils.so (CamX::OsUtils::DumpCallStacksForAllThreads(int) (.cfi)+908) (BuildId: 3603bd0806d57545236adc215a09368b)
+03-18 18:26:21.574 20886 20886 F DEBUG   :       #02 pc 00000000003f4df4  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifyResult(CamX::ResultsData*)+15684) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:26:21.574 20886 20886 F DEBUG   :       #03 pc 000000000041e854  /vendor/lib64/hw/camera.qcom.so (CamX::Session::NotifySessionSystemEvent(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*, CamX::PipelineSystemEventPayload*)+548) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:26:21.574 20886 20886 F DEBUG   :       #04 pc 00000000003afdf8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandlePipelineSystemEventPayload(CamX::SystemEventHeader*, CamX::NodeSystemEventPayload*)+616) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:26:21.574 20886 20886 F DEBUG   :       #05 pc 000000000039e7b0  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::HandleKernelTriggerErrors(CSLErrorMessageType, CSLErrorMessage const*)+1344) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:26:21.574 20886 20886 F DEBUG   :       #06 pc 000000000039da9c  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::SendErrorNotification(CSLErrorMessage const*)+204) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:26:21.574 20886 20886 F DEBUG   :       #07 pc 0000000000371dc8  /vendor/lib64/hw/camera.qcom.so (CamX::Pipeline::CSLMessageHandler(void*, CSLMessage*) (.cfi)+2504) (BuildId: ec3fbd847f045ce9d8164dc89fb54d04)
+03-18 18:26:21.574 20886 20886 F DEBUG   :       #08 pc 0000000000071fa4  /vendor/lib64/libcamxcsl.so (CSLHwInstancePollThreadFunc(void*) (.80762c52a02d745f3dc39d40f4624c98.cfi)+11540) (BuildId: dc7cc11c61af21b2faba2ca1ecc37ebf)
+03-18 18:26:21.574 20886 20886 F DEBUG   :       #09 pc 00000000000866ec  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*) (.__uniq.67847048707805468364044055584648682506)+184) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-18 18:26:21.574 20886 20886 F DEBUG   :       #10 pc 000000000007900c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 0669c520dd58ab0634801cae537d6b06)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: FATAL EXCEPTION: main
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: Process: com.music, PID: 31454
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: java.lang.IllegalStateException: Another SimpleCache instance uses the folder: /data/user/0/com.music/cache/TrackPlayer
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at com.google.android.exoplayer2.upstream.cache.SimpleCache.<init>(SimpleCache.java:249)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at com.google.android.exoplayer2.upstream.cache.SimpleCache.<init>(SimpleCache.java:229)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at com.google.android.exoplayer2.upstream.cache.SimpleCache.<init>(SimpleCache.java:194)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at com.doublesymmetry.kotlinaudio.players.BaseAudioPlayer.<init>(BaseAudioPlayer.kt:153)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at com.doublesymmetry.kotlinaudio.players.QueuedAudioPlayer.<init>(QueuedAudioPlayer.kt:14)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at com.doublesymmetry.trackplayer.service.MusicService.setupPlayer(MusicService.kt:92)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at com.doublesymmetry.trackplayer.module.MusicModule$onServiceConnected$1.invokeSuspend(MusicModule.kt:56)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1070)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:125)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:358)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:288)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:392)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:10346)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:638)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:972)
+03-19 15:56:24.543 31454 31454 E AndroidRuntime: 	Suppressed: kotlinx.coroutines.internal.DiagnosticCoroutineContextException: [StandaloneCoroutine{Cancelling}@3970454, Dispatchers.Main]
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: FATAL EXCEPTION: main
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: Process: com.music, PID: 2045
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: java.lang.SecurityException: com.music: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3388)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.os.Parcel.createException(Parcel.java:3372)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3355)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3297)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.app.IActivityManager$Stub$Proxy.registerReceiverWithFeature(IActivityManager.java:6516)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiverInternal(ContextImpl.java:2061)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1990)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1978)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.content.ContextWrapper.registerReceiver(ContextWrapper.java:821)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.startOrUpdateNotification(PlayerNotificationManager.java:1165)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.handleMessage(PlayerNotificationManager.java:1415)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.$r8$lambda$HT03vPW8fkob-d_ShBn7r7Xo9SA(Unknown Source:0)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager$$ExternalSyntheticLambda0.handleMessage(D8$$SyntheticClass:0)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:128)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:358)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:288)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:392)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:10346)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:638)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:972)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: Caused by: android.os.RemoteException: Remote stack trace:
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at com.android.server.am.BroadcastController.registerReceiverWithFeatureTraced(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:551)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.registerReceiverWithFeature(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:143)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact$registerReceiverWithFeature$(IActivityManager.java:12486)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:3251)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.onTransact(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:426)
+03-19 16:01:19.646  2045  2045 E AndroidRuntime: 
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: FATAL EXCEPTION: main
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: Process: com.music, PID: 3080
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: java.lang.SecurityException: com.music: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3388)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.os.Parcel.createException(Parcel.java:3372)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3355)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3297)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.app.IActivityManager$Stub$Proxy.registerReceiverWithFeature(IActivityManager.java:6516)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiverInternal(ContextImpl.java:2061)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1990)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1978)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.content.ContextWrapper.registerReceiver(ContextWrapper.java:821)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.startOrUpdateNotification(PlayerNotificationManager.java:1165)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.handleMessage(PlayerNotificationManager.java:1415)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.$r8$lambda$HT03vPW8fkob-d_ShBn7r7Xo9SA(Unknown Source:0)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager$$ExternalSyntheticLambda0.handleMessage(D8$$SyntheticClass:0)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:128)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:358)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:288)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:392)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:10346)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:638)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:972)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: Caused by: android.os.RemoteException: Remote stack trace:
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at com.android.server.am.BroadcastController.registerReceiverWithFeatureTraced(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:551)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.registerReceiverWithFeature(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:143)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact$registerReceiverWithFeature$(IActivityManager.java:12486)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:3251)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.onTransact(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:426)
+03-19 16:02:22.391  3080  3080 E AndroidRuntime: 
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: FATAL EXCEPTION: main
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: Process: com.music, PID: 3985
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: java.lang.IllegalStateException: Another SimpleCache instance uses the folder: /data/user/0/com.music/cache/TrackPlayer
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at com.google.android.exoplayer2.upstream.cache.SimpleCache.<init>(SimpleCache.java:249)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at com.google.android.exoplayer2.upstream.cache.SimpleCache.<init>(SimpleCache.java:229)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at com.google.android.exoplayer2.upstream.cache.SimpleCache.<init>(SimpleCache.java:194)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at com.doublesymmetry.kotlinaudio.players.BaseAudioPlayer.<init>(BaseAudioPlayer.kt:153)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at com.doublesymmetry.kotlinaudio.players.QueuedAudioPlayer.<init>(QueuedAudioPlayer.kt:14)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at com.doublesymmetry.trackplayer.service.MusicService.setupPlayer(MusicService.kt:92)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at com.doublesymmetry.trackplayer.module.MusicModule$onServiceConnected$1.invokeSuspend(MusicModule.kt:56)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1070)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:125)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:358)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:288)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:392)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:10346)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:638)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:972)
+03-19 16:03:36.156  3985  3985 E AndroidRuntime: 	Suppressed: kotlinx.coroutines.internal.DiagnosticCoroutineContextException: [StandaloneCoroutine{Cancelling}@238a645, Dispatchers.Main]
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: FATAL EXCEPTION: main
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: Process: com.music, PID: 5783
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: java.lang.SecurityException: com.music: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3388)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.os.Parcel.createException(Parcel.java:3372)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3355)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3297)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.app.IActivityManager$Stub$Proxy.registerReceiverWithFeature(IActivityManager.java:6516)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiverInternal(ContextImpl.java:2061)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1990)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1978)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.content.ContextWrapper.registerReceiver(ContextWrapper.java:821)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.startOrUpdateNotification(PlayerNotificationManager.java:1165)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.handleMessage(PlayerNotificationManager.java:1415)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.$r8$lambda$HT03vPW8fkob-d_ShBn7r7Xo9SA(Unknown Source:0)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager$$ExternalSyntheticLambda0.handleMessage(D8$$SyntheticClass:0)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:128)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:358)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:288)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:392)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:10346)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:638)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:972)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: Caused by: android.os.RemoteException: Remote stack trace:
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at com.android.server.am.BroadcastController.registerReceiverWithFeatureTraced(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:551)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.registerReceiverWithFeature(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:143)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact$registerReceiverWithFeature$(IActivityManager.java:12486)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:3251)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.onTransact(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:426)
+03-19 16:04:23.419  5783  5783 E AndroidRuntime: 
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: FATAL EXCEPTION: main
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: Process: com.music, PID: 6800
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: java.lang.IllegalStateException: Another SimpleCache instance uses the folder: /data/user/0/com.music/cache/TrackPlayer
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at com.google.android.exoplayer2.upstream.cache.SimpleCache.<init>(SimpleCache.java:249)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at com.google.android.exoplayer2.upstream.cache.SimpleCache.<init>(SimpleCache.java:229)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at com.google.android.exoplayer2.upstream.cache.SimpleCache.<init>(SimpleCache.java:194)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at com.doublesymmetry.kotlinaudio.players.BaseAudioPlayer.<init>(BaseAudioPlayer.kt:153)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at com.doublesymmetry.kotlinaudio.players.QueuedAudioPlayer.<init>(QueuedAudioPlayer.kt:14)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at com.doublesymmetry.trackplayer.service.MusicService.setupPlayer(MusicService.kt:92)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at com.doublesymmetry.trackplayer.module.MusicModule$onServiceConnected$1.invokeSuspend(MusicModule.kt:56)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1070)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:125)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:358)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:288)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:392)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:10346)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:638)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:972)
+03-19 16:04:44.005  6800  6800 E AndroidRuntime: 	Suppressed: kotlinx.coroutines.internal.DiagnosticCoroutineContextException: [StandaloneCoroutine{Cancelling}@2d1833b, Dispatchers.Main]
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: FATAL EXCEPTION: main
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: Process: com.music, PID: 7242
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: java.lang.SecurityException: com.music: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3388)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.os.Parcel.createException(Parcel.java:3372)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3355)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3297)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.app.IActivityManager$Stub$Proxy.registerReceiverWithFeature(IActivityManager.java:6516)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiverInternal(ContextImpl.java:2061)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1990)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1978)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.content.ContextWrapper.registerReceiver(ContextWrapper.java:821)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.startOrUpdateNotification(PlayerNotificationManager.java:1165)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.handleMessage(PlayerNotificationManager.java:1415)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.$r8$lambda$HT03vPW8fkob-d_ShBn7r7Xo9SA(Unknown Source:0)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager$$ExternalSyntheticLambda0.handleMessage(D8$$SyntheticClass:0)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:128)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:358)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:288)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:392)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:10346)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:638)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:972)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: Caused by: android.os.RemoteException: Remote stack trace:
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at com.android.server.am.BroadcastController.registerReceiverWithFeatureTraced(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:551)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.registerReceiverWithFeature(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:143)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact$registerReceiverWithFeature$(IActivityManager.java:12486)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:3251)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.onTransact(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:426)
+03-19 16:05:19.816  7242  7242 E AndroidRuntime: 
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: FATAL EXCEPTION: main
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: Process: com.music, PID: 7621
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: java.lang.SecurityException: com.music: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3388)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.os.Parcel.createException(Parcel.java:3372)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3355)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3297)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.app.IActivityManager$Stub$Proxy.registerReceiverWithFeature(IActivityManager.java:6516)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiverInternal(ContextImpl.java:2061)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1990)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1978)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.content.ContextWrapper.registerReceiver(ContextWrapper.java:821)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.startOrUpdateNotification(PlayerNotificationManager.java:1165)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.handleMessage(PlayerNotificationManager.java:1415)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.$r8$lambda$HT03vPW8fkob-d_ShBn7r7Xo9SA(Unknown Source:0)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager$$ExternalSyntheticLambda0.handleMessage(D8$$SyntheticClass:0)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:128)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:358)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:288)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:392)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:10346)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:638)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:972)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: Caused by: android.os.RemoteException: Remote stack trace:
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at com.android.server.am.BroadcastController.registerReceiverWithFeatureTraced(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:551)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.registerReceiverWithFeature(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:143)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact$registerReceiverWithFeature$(IActivityManager.java:12486)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:3251)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.onTransact(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:426)
+03-19 16:07:40.602  7621  7621 E AndroidRuntime: 
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: FATAL EXCEPTION: main
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: Process: com.music, PID: 10433
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: java.lang.SecurityException: com.music: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3388)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.os.Parcel.createException(Parcel.java:3372)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3355)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3297)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.app.IActivityManager$Stub$Proxy.registerReceiverWithFeature(IActivityManager.java:6516)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiverInternal(ContextImpl.java:2061)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1990)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1978)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.content.ContextWrapper.registerReceiver(ContextWrapper.java:821)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.startOrUpdateNotification(PlayerNotificationManager.java:1165)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.handleMessage(PlayerNotificationManager.java:1415)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.$r8$lambda$HT03vPW8fkob-d_ShBn7r7Xo9SA(Unknown Source:0)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager$$ExternalSyntheticLambda0.handleMessage(D8$$SyntheticClass:0)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:128)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:358)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:288)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:392)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:10346)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:638)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:972)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: Caused by: android.os.RemoteException: Remote stack trace:
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at com.android.server.am.BroadcastController.registerReceiverWithFeatureTraced(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:551)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.registerReceiverWithFeature(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:143)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact$registerReceiverWithFeature$(IActivityManager.java:12486)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:3251)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.onTransact(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:426)
+03-19 16:08:45.265 10433 10433 E AndroidRuntime: 
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: FATAL EXCEPTION: main
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: Process: com.music, PID: 11764
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: java.lang.SecurityException: com.music: One of RECEIVER_EXPORTED or RECEIVER_NOT_EXPORTED should be specified when a receiver isn't being registered exclusively for system broadcasts
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3388)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.os.Parcel.createException(Parcel.java:3372)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3355)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3297)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.app.IActivityManager$Stub$Proxy.registerReceiverWithFeature(IActivityManager.java:6516)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiverInternal(ContextImpl.java:2061)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1990)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.app.ContextImpl.registerReceiver(ContextImpl.java:1978)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.content.ContextWrapper.registerReceiver(ContextWrapper.java:821)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.startOrUpdateNotification(PlayerNotificationManager.java:1165)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.handleMessage(PlayerNotificationManager.java:1415)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager.$r8$lambda$HT03vPW8fkob-d_ShBn7r7Xo9SA(Unknown Source:0)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at com.google.android.exoplayer2.ui.PlayerNotificationManager$$ExternalSyntheticLambda0.handleMessage(D8$$SyntheticClass:0)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:128)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:358)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:288)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:392)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:10346)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:638)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:972)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: Caused by: android.os.RemoteException: Remote stack trace:
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at com.android.server.am.BroadcastController.registerReceiverWithFeatureTraced(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:551)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.registerReceiverWithFeature(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:143)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact$registerReceiverWithFeature$(IActivityManager.java:12486)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:3251)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 	at com.android.server.am.ActivityManagerService.onTransact(qb/107331089 abeb661654514963f499786d75f37343d7890f2c2dd20228bd02b7e994084bee:426)
+03-19 16:10:26.539 11764 11764 E AndroidRuntime: 

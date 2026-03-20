@@ -1,0 +1,60 @@
+{
+  "id": "BeXBcbVK",
+  "name": "Believer",
+  "type": "",
+  "album": {
+    "id": "13435951",
+    "name": "Evolve",
+    "url": "https://www.jiosaavn.com/album/evolve/gvCWqZLfVbs_"
+  },
+  "year": "2018",
+  "releaseDate": null,
+  "duration": "202",
+  "label": "Kid Ina Korner / Interscope",
+  "primaryArtists": "Imagine Dragons",
+  "primaryArtistsId": "599452",
+  "featuredArtists": "",
+  "featuredArtistsId": "",
+  "explicitContent": 0,
+  "playCount": "91812275",
+  "language": "english",
+  "hasLyrics": "false",
+  "url": "https://www.jiosaavn.com/song/believer/Mg0zcxdSYXg",
+  "copyright": "℗ 2017 KIDinaKORNER/Interscope Records",
+  "image": [
+    {
+      "quality": "50x50",
+      "link": "https://c.saavncdn.com/248/Evolve-English-2017-20180716230950-50x50.jpg"
+    },
+    {
+      "quality": "150x150",
+      "link": "https://c.saavncdn.com/248/Evolve-English-2017-20180716230950-150x150.jpg"
+    },
+    {
+      "quality": "500x500",
+      "link": "https://c.saavncdn.com/248/Evolve-English-2017-20180716230950-500x500.jpg"
+    }
+  ],
+  "downloadUrl": [
+    {
+      "quality": "12kbps",
+      "link": "https://aac.saavncdn.com/248/a6b1b78b396245f712abda8f1daefee0_12.mp4"
+    },
+    {
+      "quality": "48kbps",
+      "link": "https://aac.saavncdn.com/248/a6b1b78b396245f712abda8f1daefee0_48.mp4"
+    },
+    {
+      "quality": "96kbps",
+      "link": "https://aac.saavncdn.com/248/a6b1b78b396245f712abda8f1daefee0_96.mp4"
+    },
+    {
+      "quality": "160kbps",
+      "link": "https://aac.saavncdn.com/248/a6b1b78b396245f712abda8f1daefee0_160.mp4"
+    },
+    {
+      "quality": "320kbps",
+      "link": "https://aac.saavncdn.com/248/a6b1b78b396245f712abda8f1daefee0_320.mp4"
+    }
+  ]
+}
