@@ -50,7 +50,7 @@ export default function PlaylistScreen() {
 
         <FlatList
           data={favoriteSongs}
-          keyExtractor={(item) => item.id + Math.random()}
+          keyExtractor={(item) => 'fav-' + item.id}
           contentContainerStyle={styles.list}
           ListEmptyComponent={
             <View style={styles.emptyContainer}>

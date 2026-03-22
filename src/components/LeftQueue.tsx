@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native';
 import { usePlayerStore } from '../store/usePlayerStore';
-import { spacing, typography } from '../theme';
+import { spacing } from '../theme';
 
 export const LeftQueue = () => {
   const { queue } = usePlayerStore();

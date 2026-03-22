@@ -3,12 +3,13 @@ export const colors = {
   surface: '#0D0D0D',    // Dark grey
   card: '#141414',
   border: '#1C1C1C',
-  accent: '#C8FF00',     // Neon Lime/Yellow
+  accent: '#E2D1C3',     // Sand/Cream Highlight
   accent2: '#FF3B5C',    // Vivid Pink
   text: '#EFEFEF',
   textSecondary: '#444444',
   dim: '#222222',
-  primary: '#C8FF00',
+  primary: '#E2D1C3',
+  cream: '#E2D1C3',
 };
 
 export const spacing = {
